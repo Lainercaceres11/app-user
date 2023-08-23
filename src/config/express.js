@@ -7,7 +7,7 @@ const expressApp = express();
 // Middlewares
 expressApp.use(express.json());
 
-//Routes
+// Routes
 expressApp.use('/user', userRouter);
 
 export default expressApp;

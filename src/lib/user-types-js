@@ -1,0 +1,43 @@
+import { Type } from '@sinclair/typebox';
+
+export const idDtoSchema = Type.String({
+    format: 'uuid',
+    errorMessage: {
+        type: 'El campo no coincide con su tipo, debe ser un string',
+        format: 'Error en el formato',
+    },
+})
+export const nameDtoSchema = Type.String({
+    minLength: 2,
+    maxLength: 20,
+    errorMessage: {
+        minLength: 'El nombre debe tener 2 caracteres minimo de longitud',
+        maxLength: 'El nombre debe tener como maximo 20 caracateres',
+    },
+})
+export const surnameDtoSchema = Type.String({
+    minLength: 4,
+    maxLength: 50,
+    errorMessage: {
+        minLength: 'El nombre debe tener 4 caracteres minimo de longitud',
+        maxLength: 'El nombre debe tener como maximo 50 caracateres',
+    },
+})
+export const emailDtoSchema = Type.String({
+    format: 'email',
+    errorMessage: {
+        type: 'El email no coincide con el formato',
+        format: 'Error en el formato de email',
+    },
+})
+export const passwordDtoSchema = Type.String({
+    format: 'password',
+    minLength: 10,
+    maxLength: 25,
+    errorMessage: {
+        type: 'El tipo de la contraseña no es valido',
+        format: 'El formato de la contraseña no es valido',
+        minLength: "Debe tener al menos 10 caracteres",
+        maxLength: "Debe tener como maximo 25 caracteres"
+    },
+})

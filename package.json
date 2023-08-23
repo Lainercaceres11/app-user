@@ -36,8 +36,14 @@
         "*.{js,md}": "prettier --write"
     },
     "dependencies": {
+        "@sinclair/typebox": "^0.31.1",
+        "ajv": "^8.12.0",
+        "ajv-errors": "^3.0.0",
+        "ajv-formats": "^2.1.1",
+        "bcrypt": "^5.1.1",
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
+        "jose": "^4.14.4",
         "mongoose": "^7.4.3"
     }
 }
