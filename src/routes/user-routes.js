@@ -12,7 +12,7 @@ import userProfileController from "../controllers/user-profile.controller.js";
 import userUpdateDataController from "../controllers/user-updateDta-controller.js";
 import userEmailController from "../controllers/user-email-controller.js";
 import userPasswordController from "../controllers/user-password-controller.js";
-import userDeleteController from "../controllers/user-delete-controller.js";
+import userUnregisterController from "../controllers/user-delete-controller.js";
 
 const userRouter = Router();
 
@@ -29,6 +29,6 @@ userRouter.get("/profile", userProfileController, (req, res)=>{
 userRouter.patch("/update_data", userJWTDTO, userUpdateDataController, updateDataDto)
 userRouter.patch("/update_email", userJWTDTO, userEmailController, userUpdateEmail)
 userRouter.patch("/update_password", userJWTDTO, userPasswordController, userUpdatePassword)
-userRouter.delete("/delete", userJWTDTO, userDeleteController, unRegisterDto)
+userRouter.delete("/delete", userJWTDTO, userUnregisterController, unRegisterDto)
 
 export default userRouter;
